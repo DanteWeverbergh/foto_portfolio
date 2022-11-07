@@ -1,0 +1,14 @@
+//scss styles
+
+@import './Style/vendors/normalize';
+
+//base
+@import './Style/base/base';
+@import './Style/base/fonts';
+
+//componetns
+@import './Style/Components/Nav/nav';
+
+body {
+  background-color: grey;
+}
