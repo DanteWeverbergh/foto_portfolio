@@ -1,2 +1,2 @@
 Personal photography portfolio
-git
+Database: Firebase
