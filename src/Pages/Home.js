@@ -1,17 +1,35 @@
-import React from 'react';
+import { getDownloadURL, ref } from 'firebase/storage';
+import React, { useEffect, useState } from 'react';
 import Nav from '../Components/Nav/Nav';
 import img from '../img/background.JPG';
+import { storage } from '../lib/Firebase';
 
 function Home() {
+  //states
+  const [backgroundUrl, setBackgroundUrl] = useState('');
+
+  useEffect(() => {
+    const getBackgroundImage = async () => {
+      const reference = ref(storage, '/Backgrounds/home.JPG');
+
+      await getDownloadURL(reference).then((url) => {
+        setBackgroundUrl(url);
+      });
+    };
+
+    getBackgroundImage();
+  }, []);
+
   return (
     <>
-      <Nav
-        image={
-          'https://upload.wikimedia.org/wikipedia/commons/8/82/Tomorrowland-2017-2.jpg'
-        }
-      />
-      <div>
-        <h1>Home</h1>
+      <Nav />
+      <div className="banner">
+        <h1 className="banner__title"></h1>
+        <img
+          className="banner__image"
+          src={backgroundUrl}
+          alt="BackgroundImage"
+        />
       </div>
     </>
   );

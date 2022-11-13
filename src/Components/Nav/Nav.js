@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RiMenuLine, RiCloseLine, RiMailSendLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 function Nav({ image }) {
   const [menu, setMenu] = useState(false);
@@ -7,11 +8,14 @@ function Nav({ image }) {
   return (
     <>
       <header className="header">
-        <div className="header__item">
-          <RiMailSendLine className="header__item__icon" />
-          CONTACT
-        </div>
-        <h1>Dante Weverbergh</h1>
+        <Link to={'/contact'}>
+          <div className="header__item">
+            <RiMailSendLine className="header__item__icon" />
+          </div>
+        </Link>
+        <Link to={'/'}>
+          <h1>Dante Weverbergh</h1>
+        </Link>
         {!menu ? (
           <>
             <div className="header__item">

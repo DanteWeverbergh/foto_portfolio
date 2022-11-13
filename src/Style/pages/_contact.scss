@@ -1,0 +1,23 @@
+.contact {
+  &__image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+  }
+
+  &__form {
+    margin-left: 50%;
+
+    color: white;
+    &__title {
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

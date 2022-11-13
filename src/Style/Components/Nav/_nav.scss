@@ -4,12 +4,27 @@
   align-items: center;
 
   margin: 0px 2rem;
+  color: white;
 
   &__item {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1rem;
+
+    position: relative;
+
+    &__tooltip {
+      visibility: hidden;
+    }
+
+    &:hover {
+      &__tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
     &__icon {
       //
       font-size: 2rem;
@@ -20,6 +35,7 @@
 
 .nav {
   height: 100vh;
+  color: white;
 
   &__list {
     list-style-type: none;

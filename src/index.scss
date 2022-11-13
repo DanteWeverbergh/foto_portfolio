@@ -8,7 +8,7 @@
 
 //componetns
 @import './Style/Components/Nav/nav';
-
-body {
-  background-color: grey;
-}
+@import './Style/Components/Forms/input';
+//pages
+@import './Style/pages/home';
+@import './Style/pages/contact';
