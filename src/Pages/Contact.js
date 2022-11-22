@@ -1,6 +1,8 @@
 import { getDownloadURL, ref } from 'firebase/storage';
 import React, { useEffect, useState } from 'react';
+import Button from '../Components/Form/Button';
 import Input from '../Components/Form/Input';
+import TextArea from '../Components/Form/TextArea';
 import Nav from '../Components/Nav/Nav';
 import { storage } from '../lib/Firebase';
 import { getBackgroundImage } from '../lib/Storage';
@@ -29,8 +31,13 @@ function Contact() {
               <h1>Contact me.</h1>
 
               <div className="contact__form__inputs">
-                <Input placeholder={'Full name'} />
-                <Input placeholder={'Email'} />
+                <div className="contact__form__inputs__side">
+                  <Input placeholder={'Full name'} />
+                  <Input placeholder={'Email'} />
+                </div>
+                <Input placeholder={'Subject'} />
+                <TextArea placeholder={'Type message here ...'} />
+                <Button />
               </div>
             </form>
           </div>

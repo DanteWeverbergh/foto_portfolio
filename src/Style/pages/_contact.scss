@@ -18,6 +18,16 @@
     &__inputs {
       display: flex;
       flex-direction: column;
+      margin: 0px 5rem;
+      margin-bottom: 2rem;
+
+      &__side {
+        display: flex;
+        gap: 1rem;
+        input {
+          width: 100%;
+        }
+      }
     }
   }
 }
