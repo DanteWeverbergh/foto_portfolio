@@ -19,6 +19,19 @@ function Contact() {
     setIsLoaded(true);
   }, []);
 
+  //form states
+
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    //
+    e.preventDefault();
+    console.log('submit');
+  };
+
   return (
     <>
       {isLoaded && (
@@ -27,9 +40,7 @@ function Contact() {
           <div className="contact">
             <img className="contact__image" src={backgroundUrl} />
 
-            <form className="contact__form">
-              <h1>Contact me.</h1>
-
+            <form className="contact__form" onSubmit={handleSubmit}>
               <div className="contact__form__inputs">
                 <div className="contact__form__inputs__side">
                   <Input placeholder={'Full name'} />
