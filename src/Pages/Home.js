@@ -1,5 +1,6 @@
 import { getDownloadURL, ref } from 'firebase/storage';
 import React, { useEffect, useState } from 'react';
+import Overview from '../Components/Home/Overview';
 import Nav from '../Components/Nav/Nav';
 import img from '../img/background.JPG';
 import { storage } from '../lib/Firebase';
@@ -31,6 +32,8 @@ function Home() {
           alt="BackgroundImage"
         />
       </div>
+
+      <Overview />
     </>
   );
 }
