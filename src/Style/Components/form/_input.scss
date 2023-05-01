@@ -1,0 +1,26 @@
+input {
+  background-color: $dark-accent;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  //color: white;
+  outline: none;
+  width: 43%;
+  margin-bottom: 4vh;
+}
+
+textarea {
+  background-color: $dark-accent;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  //color: white;
+  outline: none;
+  resize: vertical;
+}

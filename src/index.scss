@@ -7,13 +7,12 @@
 //base
 @import './Style/base/base';
 @import './Style/base/fonts';
+@import './Style/base/animations';
 
 //componetns
 @import './Style/Components/Nav/nav';
-@import './Style/Components/Forms/input';
-@import './Style/Components/Forms/textarea';
-@import './Style/Components/Forms/button';
 @import './Style/Components/home/overview';
+@import './Style/Components/form/input';
 
 //pages
 @import './Style/pages/home';

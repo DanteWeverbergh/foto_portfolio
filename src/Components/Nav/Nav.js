@@ -9,7 +9,7 @@ function Nav({ image }) {
 
   return (
     <header className="header">
-      <div className="header__logo"></div>
+      <div className="header__logo">DW</div>
 
       <div className="header__nav">
         <Link to={'/home'}>

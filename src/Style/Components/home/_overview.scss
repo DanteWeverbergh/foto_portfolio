@@ -3,6 +3,16 @@
   bottom: 0;
   right: 0;
 
+  &.contact {
+    z-index: -10;
+
+    .overview__image {
+      img {
+        filter: blur(0.5rem);
+      }
+    }
+  }
+
   &__image {
     display: flex;
     justify-content: center;

@@ -8,9 +8,9 @@ import image6 from '../../img/image-6.JPG';
 import image7 from '../../img/image-7.JPG';
 import image8 from '../../img/image-8.JPG';
 
-function Overview() {
+function Overview({ page }) {
   return (
-    <div className="overview">
+    <div className={`overview slide-in-right ${page}`}>
       <div className="overview__image" id="image-1">
         <img src={image1} />
       </div>
