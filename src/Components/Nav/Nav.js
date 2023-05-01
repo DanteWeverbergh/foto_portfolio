@@ -7,22 +7,26 @@ import { AiFillHome, AiFillMail, AiFillInfoCircle, AiFillCamera } from 'react-ic
 function Nav({ image }) {
   const [menu, setMenu] = useState(false);
 
+  const [activeMenu, setActiveMenu] = useState('home');
+
   return (
     <header className="header">
       <div className="header__logo">DW</div>
 
       <div className="header__nav">
-        <Link to={'/home'}>
-          <AiFillHome className="header__nav__item active" />
+        <Link to={'/home'} onClick={() => setActiveMenu('home')}>
+          <AiFillHome className={activeMenu === 'home' ? 'header__nav__item active' : 'header__nav__item'} />
         </Link>
-        <Link to={'/contact'}>
-          <AiFillMail className="header__nav__item" />
+        <Link to={'/contact'} onClick={() => setActiveMenu('contact')}>
+          <AiFillMail className={activeMenu === 'contact' ? 'header__nav__item active' : 'header__nav__item'} />
         </Link>
 
-        <Link>
-          <AiFillInfoCircle className="header__nav__item" />
+        <Link onClick={() => setActiveMenu('info')}>
+          <AiFillInfoCircle className={activeMenu === 'info' ? 'header__nav__item active' : 'header__nav__item'} />
         </Link>
-        <AiFillCamera className="header__nav__item" />
+        <Link to={'/photoshowcase'} onClick={() => setActiveMenu('photos')}>
+          <AiFillCamera className={activeMenu === 'photos' ? 'header__nav__item active' : 'header__nav__item'} />
+        </Link>
       </div>
 
       <div className="header__socials">

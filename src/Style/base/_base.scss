@@ -12,3 +12,11 @@ body {
   margin-left: 5vw;
   padding: 0 5vw;
 }
+
+.react-photo-gallery--gallery {
+  div {
+    img {
+      object-fit: cover;
+    }
+  }
+}
