@@ -15,8 +15,8 @@ export const eventPhotos = [
   },
   {
     src: image2,
-    width: 3,
-    height: 4,
+    width: 2,
+    height: 3,
   },
   {
     src: image3,
@@ -30,18 +30,18 @@ export const eventPhotos = [
   },
   {
     src: image5,
-    width: 3,
-    height: 4,
-  },
-  {
-    src: image6,
     width: 4,
     height: 3,
   },
   {
-    src: image7,
+    src: image6,
     width: 3,
     height: 4,
+  },
+  {
+    src: image7,
+    width: 5,
+    height: 3,
   },
   {
     src: image8,
