@@ -2,53 +2,33 @@ import React, { useState } from 'react';
 import { RiMenuLine, RiCloseLine, RiMailSendLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
+import { AiFillHome, AiFillMail, AiFillInfoCircle, AiFillCamera } from 'react-icons/ai';
+
 function Nav({ image }) {
   const [menu, setMenu] = useState(false);
 
   return (
-    <>
-      <header className="header">
-        <Link to={'/contact'}>
-          <div className="header__item">
-            <RiMailSendLine className="header__item__icon" />
-          </div>
-        </Link>
-        <Link to={'/'}>
-          <h1>Dante Weverbergh</h1>
-        </Link>
-        {!menu ? (
-          <>
-            <div className="header__item">
-              <RiMenuLine
-                className="header__item__icon"
-                onClick={() => setMenu(!menu)}
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="header__item">
-              <RiCloseLine
-                className="header__item__icon"
-                onClick={() => setMenu(!menu)}
-              />
-            </div>
-          </>
-        )}
-      </header>
+    <header className="header">
+      <div className="header__logo"></div>
 
-      {menu && (
-        <>
-          <div className="nav">
-            <ul className="nav__list">
-              <li className="nav__list__item">Link 1</li>
-              <li className="nav__list__item">Link 2</li>
-              <li className="nav__list__item"> Link 3</li>
-            </ul>
-          </div>
-        </>
-      )}
-    </>
+      <div className="header__nav">
+        <Link to={'/home'}>
+          <AiFillHome className="header__nav__item active" />
+        </Link>
+        <Link to={'/contact'}>
+          <AiFillMail className="header__nav__item" />
+        </Link>
+
+        <Link>
+          <AiFillInfoCircle className="header__nav__item" />
+        </Link>
+        <AiFillCamera className="header__nav__item" />
+      </div>
+
+      <div className="header__socials">
+        <div className="header__socials__item">HH</div>
+      </div>
+    </header>
   );
 }
 

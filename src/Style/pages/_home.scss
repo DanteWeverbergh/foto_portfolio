@@ -1,52 +1,25 @@
-.banner {
-  &__title {
-    //
-  }
-
-  &__image {
-    //
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+.home {
+  &__text {
     position: absolute;
-    top: 0;
-    z-index: -10;
-  }
-}
+    top: 29vh;
 
-.overview {
-  margin-top: 95vh;
+    &__title {
+      font-size: 5rem;
+      margin: 0;
+      padding: 0;
+    }
 
-  &__title {
-    text-align: center;
-  }
+    &__subtitle {
+      font-size: 4rem;
+      color: $accent-color;
+      margin: 0;
+      padding: 0;
+    }
 
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 25px;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    &__card {
-      height: 40vh;
-      width: 40vw;
-      border-radius: 25px;
-
-      img {
-        border-radius: 25px;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        cursor: pointer;
-
-        &:hover {
-          //
-          filter: blur(5px);
-        }
-      }
+    &__info {
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding: 0;
     }
   }
 }

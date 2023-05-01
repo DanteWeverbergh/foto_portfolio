@@ -23,17 +23,15 @@ function Home() {
 
   return (
     <>
-      <Nav />
-      <div className="banner">
-        <h1 className="banner__title"></h1>
-        <img
-          className="banner__image"
-          src={backgroundUrl}
-          alt="BackgroundImage"
-        />
-      </div>
+      <div className="container home">
+        <div className="home__text">
+          <h1 className="home__text__title">Dante</h1>
+          <h2 className="home__text__subtitle">Weverbergh</h2>
+          <p className="home__text__info">I specialse in Events, automotive and travel photography</p>
+        </div>
 
-      <Overview />
+        <Overview />
+      </div>
     </>
   );
 }

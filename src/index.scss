@@ -1,5 +1,7 @@
 //scss styles
 
+@import './Style/base/variables';
+
 @import './Style/vendors/normalize';
 
 //base
@@ -11,6 +13,7 @@
 @import './Style/Components/Forms/input';
 @import './Style/Components/Forms/textarea';
 @import './Style/Components/Forms/button';
+@import './Style/Components/home/overview';
 
 //pages
 @import './Style/pages/home';

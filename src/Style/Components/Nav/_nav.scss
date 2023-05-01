@@ -1,68 +1,47 @@
 .header {
+  //
+  background-color: $dark-accent;
+
+  width: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90vh;
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 
-  margin: 0px 2rem;
-  color: white;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-
-    position: relative;
-
-    &__tooltip {
-      visibility: hidden;
-    }
-
-    &:hover {
-      &__tooltip {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    &__icon {
-      //
-      font-size: 2rem;
-      cursor: pointer;
-    }
+  &:hover {
+    // width: 15vw;
   }
-}
 
-.nav {
-  height: 100vh;
-  color: white;
+  &__logo {
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+  }
 
-  &__list {
-    list-style-type: none;
-    padding: 0;
+  &__nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 25px;
 
     &__item {
-      font-size: 5rem;
+      width: 1.5vw;
+      height: 1.5vw;
+      cursor: pointer;
 
-      color: white;
-      border-top: 0.2rem solid white;
-      padding: 2rem 2rem;
-      //
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        height: 100%;
-        width: 100%;
+      &:hover {
+        color: $accent-color;
       }
 
-      &:last-child {
-        border-bottom: 0.2rem solid white;
+      &.active {
+        color: $accent-color;
       }
     }
   }
